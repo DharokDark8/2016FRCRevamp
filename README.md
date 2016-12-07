@@ -5,3 +5,9 @@ The current version is very bare-bones. Many things are missing, like any advanc
 ### Credit
 1. Benjamin Kittendorf for pretty much everything.
 2. [RevDisplay](../src/org/usfirst/frc/team5853/robot/RevDisplay.java) Credits go to [red-green](http://github.com/red-green)
+
+###Team Memebers
+| Teams         | Build| Programming | Finance |
+| ------------- | ---- | ----------- | ------- |
+| Captains      | test |    test     |   test  |
+| Members       |test1 test2 test3|test1 test2 test3|test1 test2 test3|
