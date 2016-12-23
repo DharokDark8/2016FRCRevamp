@@ -11,6 +11,9 @@ public class DashBoard {
 		initDash();	
 	}
 
+	/**
+	 * Initializes every Smart Dashboard field with empty values.
+	 */
 	private void initDash(){
 		
 		SmartDashboard.putNumber("Screen", 0);
@@ -32,6 +35,10 @@ public class DashBoard {
 		SmartDashboard.putString("14", "");
 	}
 
+	
+	/**
+	 * Runs the Smart Dashboard with custom inputs, switching screens based on [screenNum].
+	 */
 	public void runDash(){
 
 		switch(screenNum){
@@ -211,7 +218,9 @@ public class DashBoard {
 		}
 		readScreen();
 	}
-
+	/**
+	 * Updates [readScreen], for switching Diag Screens. Called internally.
+	 */
 	private void readScreen() {
 		try{
 			screenNum = (int) SmartDashboard.getNumber("Screen", 0);

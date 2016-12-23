@@ -13,14 +13,14 @@ import edu.wpi.first.wpilibj.Preferences;
  */
 public class Robot extends IterativeRobot implements IOs{
 
-	Gamepad gp;
-	Drive dr;
-	Shooter sh;
-	DashBoard sd;
-	RevDisplay rd;
-	Camera cam0;
-	DriverStation ds;
-	static Preferences prefs;
+	static Gamepad gp;					//Accesses the Gamepad
+	static Drive dr;					//Controls the Drivetrain
+	static Shooter sh;					//Controls the Shooting Mechanism
+	static DashBoard sd;				//Accesses the Smart Dashboard
+	static RevDisplay rd;				//Controls the REV Digit MXP Display
+	static Camera cam0;				//Controls the Camera
+	static DriverStation ds;			//Accesses advances information from the Driver Station
+	static Preferences prefs;	//Stores Data Fields across power cycles
 	
 	public void robotInit() {
 		prefs = Preferences.getInstance();
@@ -47,13 +47,9 @@ public class Robot extends IterativeRobot implements IOs{
     }
     
     public void teleopPeriodic() {
-    	double l = gp.getRawAxis(leftYaxis);
-    	double r = gp.getRawAxis(rightYaxis);
-    	if(gp.getRawButton(BUTTON_SHOULDER_RIGHT)){
-    		dr.tankDrive(l, r);
-    	}else{
-    		dr.tankDrive(l/2, r/2);
-    	}
+    	double l = dr.inputMods(gp.getRawAxis(leftYaxis));
+    	double r = dr.inputMods(gp.getRawAxis(rightYaxis));
+    	dr.tankDrive(l, r);
     	cam0.simpleVision();
     	sd.runDash();
     	rd.displayVoltage(ds.getBatteryVoltage());

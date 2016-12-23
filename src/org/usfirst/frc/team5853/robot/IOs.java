@@ -52,6 +52,9 @@ public interface IOs {
 	final int lrP = 1;
 	final int rfP = 2;
 	final int rrP = 3;
+	
+	final double nonTurboSpeed = .5;
+	final double deadzone = .05;
 
 	//Shooter Constants
 	final int lShWh = 4;
@@ -83,6 +86,8 @@ public interface IOs {
 	final int BUTTON_START = 8;
 	final int BUTTON_LEFT_STICK = 9;
 	final int BUTTON_RIGHT_STICK = 10;
+	
+	final boolean squareInputs = false;
 	
 	//Controller Axes
 	final int leftXaxis = 0;

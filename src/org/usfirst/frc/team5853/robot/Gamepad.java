@@ -10,6 +10,10 @@ public class Gamepad extends Joystick implements IOs{
 		super(port);
 	}
 
+	/**
+	 * @param Button ID. See [IOs] for list of IDs
+	 * @return Boolean Value of button
+	 */
 	public boolean getRawButton(int button){
 		return super.getRawButton(button);
 	}
@@ -23,7 +27,7 @@ public class Gamepad extends Joystick implements IOs{
 	}
 	
 	/**
-	 * Gets the position of the Dpad, clockwise starting at 0.
+	 * Gets the position of the D-pad, clockwise starting at 0.
 	 */
 	public int getPOV(){
 		return super.getPOV() / 45;

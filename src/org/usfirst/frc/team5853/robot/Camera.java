@@ -42,11 +42,15 @@ public class Camera {
 		cam.setFPS(2);
 		cam.updateSettings();
 	}
-
+	
+	/**
+	 * The (second) simplest way to send a camera image to the dashboard.
+	 */
 	public void simpleVision(){
 		cam.getImage(imageFinal);
 		server.setImage(imageFinal);
 		Timer.delay(1/framesPerSecond);
+		//TODO Fix this. Threads are difficult, but this function is required.
 	}
 
 }

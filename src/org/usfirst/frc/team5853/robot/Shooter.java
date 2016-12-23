@@ -17,11 +17,19 @@ public class Shooter implements IOs{
 		leftWheel.setInverted(true);
 	}
 	
+	/**
+	 * Spins the Shooter's ejection wheels.
+	 * @param s Speed at which to spin said wheels
+	 */
 	public static void spinWheels(double s){
 		leftWheel.set(s);
 		rightWheel.set(s);
 	}
 	
+	/**
+	 * Controls the which motor for raising and lowering the Shooting mechanism
+	 * @param s Speed to move the winch
+	 */
 	public static void moveArm(double s){
 		Arm.set(s);
 	}

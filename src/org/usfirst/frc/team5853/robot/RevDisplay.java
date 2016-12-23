@@ -107,23 +107,15 @@ public class RevDisplay
 
     	c = s.charAt(i);
     	
-    	if ((c >= '0') && (c <= '9'))
-    	{
+    	if((c >= '0') && (c <= '9')){
     		j = (byte) (c - '0');
-    	}
-    	else if ((c >= 'A') && (c <= 'Z'))
-    	{
+    	}else if((c >= 'A') && (c <= 'Z')){
     		j = (byte) (c - 'A' + 10);
-    	}
-    	else if ((c >= 'a') && (c <= 'z'))
-    	{
+    	}else if((c >= 'a') && (c <= 'z')){
     		j = (byte) (c - 'a' + 10);						//Make the letter upper case.
-    	}
-    	else if (c == ' ') {
+    	}else if(c == ' '){
     		j = 36;											//Handle the space character.
-    	}
-    	else
-    	{
+    	}else{
     		j = 33;											//Unknown character, make it an 'X'.
     	}
     	
