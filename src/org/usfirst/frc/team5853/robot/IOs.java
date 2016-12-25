@@ -48,34 +48,36 @@ public interface IOs {
 	 */
 
 	//Drive Motor Constants
-	final int lfP = 0;
-	final int lrP = 1;
-	final int rfP = 2;
-	final int rrP = 3;
+	final int lfW = 0;	//Left Front Wheel
+	final int lrW = 1;	//Left Rear Wheel
+	final int rfW = 2;	//Right Front Wheel
+	final int rrW = 3;	//Right Rear Wheel
 	
-	final double nonTurboSpeed = .5;
-	final double deadzone = .05;
+	final double nonTurboSpeed = .5;	//Speed multiplier for non-turbo
+	final double deadzone = .05;		//Joystick Deadzone
 
 	//Shooter Constants
-	final int lShWh = 4;
-	final int rShWh = 5;
-	final int shArm = 6;
-	final int shServ = 7;
+	final int lShWh = 4;	//Left Ejection Wheel
+	final int rShWh = 5;	//Right Ejection Wheel
+	final int shArm = 6;	//Winch Motor
+	final int shServ = 7;	//Launching Servo
 
 	//DIOs
-	final int shEnc1 = 0;
-	final int shEnc2 = 1;
-	final int shDnSw = 2;
-	final int shUpSw = 3;
-	final int lDrEnc1 = 4;
-	final int lDrEnc2 = 5;
-	final int rDrEnc1 = 6;
-	final int rDrEnc2 = 7;
+							//Encoders require 2 DIO channels
+	final int shEnc1 = 0;	//Shooter Encoder Primary
+	final int shEnc2 = 1;	//Shooter Encoder Secondary
+	final int shDnSw = 2;	//Lower Shooter Limit Switch
+	final int shUpSw = 3;	//Upper Shooter Limit Switch
+	final int lDrEnc1 = 4;	//Left Drive Encoder Primary
+	final int lDrEnc2 = 5;	//Left Drive Encoder Secondary
+	final int rDrEnc1 = 6;	//Right Drive Encoder Primary
+	final int rDrEnc2 = 7;	//Right Drive Encoder Secondary
 
 	//AIOs
-	final int revPot = 3;
+	final int revPot = 3;	//Analog Address of the REV Digit MXP Potentiometer.
 
 	//Controller Buttons
+	//I'm not labeling every single one of these.
 	final int BUTTON_A = 1;
 	final int BUTTON_B = 2;
 	final int BUTTON_X = 3;
@@ -87,9 +89,10 @@ public interface IOs {
 	final int BUTTON_LEFT_STICK = 9;
 	final int BUTTON_RIGHT_STICK = 10;
 	
-	final boolean squareInputs = false;
+	final boolean squareInputs = false;	//Should the inputs be squared.
 	
 	//Controller Axes
+	//I'm not labeling every one of these.
 	final int leftXaxis = 0;
 	final int leftYaxis = 1;
 	final int lTrigaxis = 2;
