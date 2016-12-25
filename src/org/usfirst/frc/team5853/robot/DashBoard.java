@@ -43,7 +43,7 @@ public class DashBoard {
 
 		switch(screenNum){
 		case 0:
-			SmartDashboard.putString("0", "");
+			SmartDashboard.putString("0", "Overview Mode");
 			SmartDashboard.putString("1", "");
 			SmartDashboard.putString("2", "");
 			SmartDashboard.putString("3", "");
@@ -60,7 +60,7 @@ public class DashBoard {
 			SmartDashboard.putString("14", "");
 			break;
 		case 1:
-			SmartDashboard.putString("0", "");
+			SmartDashboard.putString("0", "Drive Overview");
 			SmartDashboard.putString("1", "");
 			SmartDashboard.putString("2", "");
 			SmartDashboard.putString("3", "");
@@ -77,7 +77,7 @@ public class DashBoard {
 			SmartDashboard.putString("14", "");
 			break;
 		case 2:
-			SmartDashboard.putString("0", "");
+			SmartDashboard.putString("0", "Shooter Overview");
 			SmartDashboard.putString("1", "");
 			SmartDashboard.putString("2", "");
 			SmartDashboard.putString("3", "");

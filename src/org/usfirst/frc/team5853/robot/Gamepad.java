@@ -4,8 +4,8 @@ import edu.wpi.first.wpilibj.Joystick;
 
 public class Gamepad extends Joystick implements IOs{
 
-	
-	
+
+
 	public Gamepad(int port){
 		super(port);
 	}
@@ -25,13 +25,17 @@ public class Gamepad extends Joystick implements IOs{
 	public double getRawAxis(int axis){
 		return super.getRawAxis(axis);
 	}
-	
+
 	/**
-	 * Gets the position of the D-pad, clockwise starting at 0.
+	 * Gets the position of the D-pad, clockwise starting at 0, and ending at 7.
 	 */
 	public int getPOV(){
-		return super.getPOV() / 45;
+		if(super.getPOV() != -1){
+			return super.getPOV() / 45;			
+		}else{
+			return -1;
+		}
 	}
-	
+
 
 }

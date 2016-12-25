@@ -16,10 +16,10 @@ public class Drive implements IOs{
 
 
 	public Drive(){
-		lf = new VictorSP(lfP);
-		rf = new VictorSP(rfP);
-		lr = new VictorSP(lrP);
-		rr = new VictorSP(rrP);
+		lf = new VictorSP(lfW);
+		rf = new VictorSP(rfW);
+		lr = new VictorSP(lrW);
+		rr = new VictorSP(rrW);
 
 		lDrEnc = new Encoder(lDrEnc1, lDrEnc2, true);
 		rDrEnc = new Encoder(rDrEnc1, rDrEnc2, false);
