@@ -2,6 +2,10 @@ package org.usfirst.frc.team5853.robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+/**
+ * Accesses and controls the Java Smart Dashboard.
+ * @author Benjamin Kittendorf
+ */
 public class DashBoard {
 
 	int screenNum = 0;
@@ -15,9 +19,9 @@ public class DashBoard {
 	 * Initializes every Smart Dashboard field with empty values.
 	 */
 	private void initDash(){
-		
+
 		SmartDashboard.putNumber("Screen", 0);
-		
+
 		SmartDashboard.putString("0", "TEAM 5853 SMART DASHBOARD");
 		SmartDashboard.putString("1", "  MADE BY YOURS TRUELY,");
 		SmartDashboard.putString("2", "  BENJAMIN KITTNENDORF");
@@ -35,7 +39,7 @@ public class DashBoard {
 		SmartDashboard.putString("14", "");
 	}
 
-	
+
 	/**
 	 * Runs the Smart Dashboard with custom inputs, switching screens based on [screenNum].
 	 */
@@ -219,7 +223,7 @@ public class DashBoard {
 		readScreen();
 	}
 	/**
-	 * Updates [readScreen], for switching Diag Screens. Called internally.
+	 * Updates [readScreen], for switching Diagnostic Screens. Called internally.
 	 */
 	private void readScreen() {
 		try{

@@ -2,10 +2,16 @@ package org.usfirst.frc.team5853.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-public class Gamepad extends Joystick implements IOs{
+/**
+ * Most of this I just overrode the super's methods to give it a better javadoc. 
+ * I may choose to add more functionality later.
+ * @author Benjamin
+ */
+public class Gamepad extends Joystick implements IOs, ControllerButtons{
 
-
-
+	/**
+	 * @param port The designated USB port for this instance of Gamepad.
+	 */
 	public Gamepad(int port){
 		super(port);
 	}

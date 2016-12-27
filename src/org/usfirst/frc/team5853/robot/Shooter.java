@@ -5,37 +5,41 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.VictorSP;
 
+/**
+ * Controls the Shooting Mechanism and associated paraphernalia, namely encoders and limit switches.
+ * @author Benjamin
+ */
 public class Shooter implements IOs{
 
-	
+
 	private static VictorSP leftWheel;
 	private static VictorSP rightWheel;
 	private static Spark Arm;
-	
+
 	private static Encoder shooterEnc;		//winch-mounted encoder
 	private static DigitalInput switchDown;
 	private static DigitalInput switchUp;
-	
+
 	private static boolean ifHitTop = false;	//For making sure the upper limit switch hasn't already been set.
 	private static boolean ifHitBottom = false;	//For making sure the lower limit switch hasn't already been set.
 	static double limitUpper = 15000;
 	static double limitLower = -15000;
-	
+
 	private static int lastPOV = -1;
 
-	
+
 	public Shooter(){
 		leftWheel = new VictorSP(lShWh);
 		rightWheel = new VictorSP(rShWh);
 		Arm = new Spark(shArm);
-		
+
 		shooterEnc = new Encoder(shEnc1, shEnc2);
 		switchDown = new DigitalInput(2);
 		switchUp = new DigitalInput(3);
-		
+
 		leftWheel.setInverted(true);
 	}
-	
+
 	/**
 	 * Spins the Shooter's ejection wheels.
 	 * @param s Speed at which to spin said wheels
@@ -44,18 +48,18 @@ public class Shooter implements IOs{
 		leftWheel.set(s);
 		rightWheel.set(s);
 	}
-	
+
 	/**
 	 * Controls the which motor for raising and lowering the Shooting mechanism
-	 * @param s Speed to move the winch (The winch is slow, so 1 is recommended)
+	 * @param s Speed to move the winch (The winch is very slow, so 1 is recommended)
 	 */
 	public static void moveArm(double s){
 		Arm.set(s);
 	}
-	
+
 	/**
 	 * Method for controlling the shooting arm.
-	 * @param pov Input between 0-7(coincidentally the same as the getPOV() method)
+	 * @param pov Input between 0-7(coincidentally the same as the output of [Gamepad.getPOV()])
 	 */
 	public void controlArm(int pov){
 		if(lastPOV == 2 && Robot.gp.getPOV() == -1){		//If D-Pad is at 3 go all the way down
@@ -69,10 +73,10 @@ public class Shooter implements IOs{
 		}else{												//Emergency State if input is f'ed up.
 			Arm.set(0);
 		}
-		
+
 		lastPOV = Robot.gp.getPOV();
 	}
-	
+
 	/**
 	 * Call this periodically to ensure that the limit switches record encoder values.
 	 */
