@@ -1,7 +1,6 @@
 package org.usfirst.frc.team5853.robot;
 
 import com.ni.vision.NIVision.Image;
-
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
@@ -37,6 +36,9 @@ public class Camera {
 		inithsvPrefs();
 	}
 
+	/**
+	 * Initializes Preferences for HSV filtering. If a preference isn't found, assumes the widest range.
+	 */
 	private void inithsvPrefs(){
 		hsvPrefs[0] = prefs.getInt("hMin", 0);
 		hsvPrefs[1] = prefs.getInt("hMax", 255);
@@ -46,11 +48,15 @@ public class Camera {
 		hsvPrefs[5] = prefs.getInt("vMax", 255);
 	}
 
+	/**
+	 * I don't know if this is required, but it sets up some basic parameters for the camera, like
+	 * Exposure, Brightness, White Balance, and FPS
+	 */
 	private void setCamParams(){
 		cam.setExposureAuto();
 		cam.setBrightness(30);
 		cam.setWhiteBalanceAuto();
-		cam.setFPS(2);
+		cam.setFPS(framesPerSecond);
 		cam.updateSettings();
 	}
 

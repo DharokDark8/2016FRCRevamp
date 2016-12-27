@@ -37,6 +37,8 @@ public class DashBoard {
 		SmartDashboard.putString("12", "");
 		SmartDashboard.putString("13", "");
 		SmartDashboard.putString("14", "");
+		
+		SmartDashboard.putNumber("Position", -1);
 	}
 
 
@@ -231,5 +233,9 @@ public class DashBoard {
 		}catch(IllegalArgumentException IAE){
 			IAE.printStackTrace();
 		}
+	}
+	
+	public double readAutonPosition(){
+		return SmartDashboard.getNumber("Position", -1);
 	}
 }

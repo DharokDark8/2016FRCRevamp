@@ -55,11 +55,10 @@ public class Robot extends IterativeRobot implements IOs, ControllerButtons{
 
 	public void disabledPeriodic(){
 		cam0.simpleVision();
-		sd.runDash();
-		rd.displayVoltage(ds.getBatteryVoltage());
+		basicUpkeep();
 	}
 	public void teleopInit(){
-
+		rd.displayAuthor();
 	}
 
 	public void teleopPeriodic() {
@@ -68,6 +67,10 @@ public class Robot extends IterativeRobot implements IOs, ControllerButtons{
 		dr.tankDrive(l, r);
 		sh.controlArm(gp.getPOV());
 		cam0.simpleVision();
+		basicUpkeep();
+	}
+	
+	private void basicUpkeep(){
 		sd.runDash();
 		rd.displayVoltage(ds.getBatteryVoltage());
 	}

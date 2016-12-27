@@ -8,7 +8,6 @@ package org.usfirst.frc.team5853.robot;
 public interface ControllerButtons {
 
 	//Gamepad Controller Buttons
-	//I'm not labeling every single one of these.
 	final int BUTTON_A = 1;
 	final int BUTTON_B = 2;
 	final int BUTTON_X = 3;
@@ -21,7 +20,6 @@ public interface ControllerButtons {
 	final int BUTTON_RIGHT_STICK = 10;
 
 	//Gamepad Controller Axes
-	//I'm not labeling every one of these.
 	final int leftXaxis = 0;
 	final int leftYaxis = 1;
 	final int lTrigaxis = 2;
