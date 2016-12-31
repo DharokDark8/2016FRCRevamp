@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.Joystick;
  * I may choose to add more functionality later.
  * @author Benjamin
  */
-public class Gamepad extends Joystick implements IOs, ControllerButtons{
+public class Gamepad extends Joystick{
 
 	/**
 	 * @param port The designated USB port for this instance of Gamepad.
@@ -42,6 +42,6 @@ public class Gamepad extends Joystick implements IOs, ControllerButtons{
 			return -1;
 		}
 	}
-
+	
 
 }

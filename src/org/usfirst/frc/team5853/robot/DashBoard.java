@@ -39,6 +39,7 @@ public class DashBoard {
 		SmartDashboard.putString("14", "");
 		
 		SmartDashboard.putNumber("Position", -1);
+		SmartDashboard.putNumber("Set Angle", 45);
 	}
 
 
@@ -237,5 +238,9 @@ public class DashBoard {
 	
 	public double readAutonPosition(){
 		return SmartDashboard.getNumber("Position", -1);
+	}
+	
+	public double readSetAngle(){
+		return SmartDashboard.getNumber("Set Angle", 45);
 	}
 }

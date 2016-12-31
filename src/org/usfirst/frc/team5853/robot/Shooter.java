@@ -20,10 +20,12 @@ public class Shooter implements IOs{
 	private static DigitalInput switchDown;
 	private static DigitalInput switchUp;
 
+	//May be made obsolete by the use of a Spark speed controller.
 	private static boolean ifHitTop = false;	//For making sure the upper limit switch hasn't already been set.
 	private static boolean ifHitBottom = false;	//For making sure the lower limit switch hasn't already been set.
-	static double limitUpper = 15000;
-	static double limitLower = -15000;
+	
+	static double limitUpper = 15000;			//Current upper Limit. Should be defined by [.getDistance()]
+	static double limitLower = -15000;			//Current lower Limit. Should be defined by [.getDistance()]
 
 	private static int lastPOV = -1;
 
