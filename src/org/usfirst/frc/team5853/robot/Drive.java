@@ -18,7 +18,9 @@ public class Drive implements IOs{
 	public ADXRS450_Gyro gyro;
 
 
-
+	/**
+	 * Creates 4 motor controllers based on values located in the [IOs] interface
+	 */
 	public Drive(){
 		lf = new VictorSP(lfW);	//Left Front Wheel
 		rf = new VictorSP(rfW);	//Right Front Wheel

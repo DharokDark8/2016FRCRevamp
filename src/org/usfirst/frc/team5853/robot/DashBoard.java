@@ -10,7 +10,9 @@ public class DashBoard {
 
 	int screenNum = 0;
 
-
+	/**
+	 * Accesses and controls the Java Smart Dashboard.
+	 */
 	public DashBoard(){
 		initDash();	
 	}

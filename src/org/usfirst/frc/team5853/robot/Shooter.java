@@ -29,7 +29,9 @@ public class Shooter implements IOs{
 
 	private static int lastPOV = -1;
 
-
+	/**
+	 * Creates objects located on the shooting mechanism based on values located in the [IOs] interface
+	 */
 	public Shooter(){
 		leftWheel = new VictorSP(lShWh);
 		rightWheel = new VictorSP(rShWh);

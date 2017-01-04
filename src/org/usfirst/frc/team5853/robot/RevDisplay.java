@@ -31,7 +31,10 @@ public class RevDisplay
 	final byte DECIMAL_POINT = 0b01000000;					//Bit to turn on a decimal point.
 
 	Timer scrollTimer = new Timer();
-
+	
+	/**
+	 *  Instantiates an I2C connection with proper byte values to turn on the Display.
+	 */
 	public RevDisplay(){
 		//I2C address of the digit board is 0x70
 		i2c = new I2C(Port.kMXP, 0x70);
