@@ -30,5 +30,9 @@ public interface ControllerButtons {
 	//HOTAC Controller Buttons
 	//HOTAC Controller Axes
 
-	final boolean squareInputs = false;	//Should the inputs be squared.
+	
+	
+//THIS MIGHT CRASH. I DON'T KNOW HOW INTERFACES HANDLE PREFERENCES
+	//Should the inputs be squared. Checks against preferences, so it is modifiable from the dashboard
+	boolean squareInputs = Robot.prefs.getBoolean("squareInputs", false);
 }
