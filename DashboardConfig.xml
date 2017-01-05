@@ -1,1 +1,101 @@
-<!--Configuration File for the Smart Dashboard.-->
+<xml version="1.0">
+<dashboard>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.RobotPreferences">
+		<location x="971" y="0"/>
+	</static-widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.WebcamViewerExtension">
+		<location x="454" y="2"/>
+		<width>515</width>
+		<height>330</height>
+	</static-widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.ConnectionIndicator">
+		<location x="971" y="202"/>
+	</static-widget>
+	<widget field="0" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="0"/>
+		<width>449</width>
+		<property name="Font Size" value="16"/>
+	</widget>
+	<widget field="1" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="24"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="2" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="46"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="3" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="68"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="4" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="90"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="5" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="112"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="6" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="134"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="7" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="156"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="8" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="178"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="9" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="0" y="200"/>
+		<width>450</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="10" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="222"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="11" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="244"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="12" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="266"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="13" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="288"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="14" type="String" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="1" y="310"/>
+		<width>449</width>
+		<property name="Font Size" value="14"/>
+	</widget>
+	<widget field="Screen" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="332"/>
+	</widget>
+	<widget field="Set Angle" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="129" y="332"/>
+	</widget>
+	<widget field="Autonomous Mode" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="275" y="332"/>
+	</widget>
+</dashboard>
+<live-window>
+</live-window>
+</xml>
