@@ -1,20 +1,21 @@
 package org.usfirst.frc.team5853.robot;
 
-import com.ni.vision.NIVision.Image;
+
+import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.vision.USBCamera;
 
 /**
  * Handles the vision computations. The Idea is that this entire class is modular, so 
  * each individual process can be called by itself. That may not turn out very well.
+ * The 2017 update COMPLETELY fucked this over.
  * @author Benjamin Kittendorf
  * @version 0.0.0001
  */
 public class Camera {
 
-	USBCamera cam;
+	UsbCamera cam;
 	CameraServer server;
 	public static Image imageFinal = null;
 	static int framesPerSecond = 1;
@@ -27,12 +28,9 @@ public class Camera {
 	 * @param fps number of pictures per second. While 60fps is glorious, don't try it.
 	 */
 	public Camera(String name, int fps){
-		cam = new USBCamera(name);
 		server = CameraServer.getInstance();
-		cam.openCamera();
 		setCamParams();
 		framesPerSecond = fps;
-		server.setQuality(50);
 		inithsvPrefs();
 	}
 
