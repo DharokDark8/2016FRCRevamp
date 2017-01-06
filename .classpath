@@ -12,5 +12,7 @@
 			<attribute name="javadoc_location" value="file:/C:/Users/Benjamin/wpilib/java/current/javadoc/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Benjamin/wpilib/java/current/lib/cscore.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Benjamin/wpilib/java/current/lib/opencv.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
