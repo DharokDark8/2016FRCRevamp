@@ -1,9 +1,8 @@
 package org.usfirst.frc.team5853.robot;
 
 import edu.wpi.first.wpilibj.I2C;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.I2C.Port;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  * Controls the REV Digit MXP Display. Handy little bugger, for sure.
@@ -19,7 +18,6 @@ public class RevDisplay
 	final String defaultAuto = "Default";
 	final String customAuto = "My Auto";
 	String autoSelected;
-	SendableChooser chooser;
 
 	static byte osc [];
 	static byte blink [];
